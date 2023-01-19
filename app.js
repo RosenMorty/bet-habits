@@ -1,4 +1,4 @@
-const a = prompt ("Сколько будет 7 + или - 15 ?");
+/*const a = prompt ("Сколько будет 7 + или - 15 ?");
 const num = String(22);
 const num2 = String(-8);
 switch (a) {
@@ -13,4 +13,15 @@ switch (a) {
     break;
     default:
         console.log("Долбаеб!");
+} */
+
+const balance = 1000;
+const bonusBalance = 100;
+const isBanned = false;
+const isErist = false;
+const isSelling = true;
+if (balance >= 1000 || bonusBalance >= 100 && !isBanned && !isErist && isSelling) {
+    console.log("Ты можешь купить игру!");
+} else {
+    console.log("Нюхуай бебру");
 }
