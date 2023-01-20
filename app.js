@@ -15,7 +15,7 @@ switch (a) {
         console.log("Долбаеб!");
 } */
 
-const balance = 1000;
+/*const balance = 1000;
 const bonusBalance = 100;
 const isBanned = false;
 const isErist = false;
@@ -24,4 +24,14 @@ if (balance >= 1000 || bonusBalance >= 100 && !isBanned && !isErist && isSelling
     console.log("Ты можешь купить игру!");
 } else {
     console.log("Нюхуай бебру");
+} */
+
+function toPower(num, power) {
+    const res = num ** power;
+    return res;
 }
+
+console.log(toPower(2,3));
+
+const poft = (num, power) => num ** power; 
+console.log(poft(2,3));
