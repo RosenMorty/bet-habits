@@ -26,12 +26,38 @@ if (balance >= 1000 || bonusBalance >= 100 && !isBanned && !isErist && isSelling
     console.log("Нюхуай бебру");
 } */
 
-function toPower(num, power) {
+/*function toPower(num, power) {
     const res = num ** power;
     return res;
 }
-
 console.log(toPower(2,3));
 
 const poft = (num, power) => num ** power; 
-console.log(poft(2,3));
+console.log(poft(2,3)); */
+const age = Number(prompt("Сколько тебе лет ?"));
+const work = prompt("Есть ли у тебя работа ?");
+const money = Number(prompt("Сколько у тебя денег ?"));
+function userData (age, work, money) {
+    if (money >= 2000) {
+        return console.log(`У тебя хватает денег сумма твоего депозита становится: ${money} $ `, true);
+    } if (age >= 24 && work.toLowerCase === "да" && money < 2000) {
+        money += 500;
+        if (money >= 2000) {
+            return console.log(`У тебя не хватает денег, но мы выдаем тебе кредит 500$ и сумма твоего депозита становится: ${money} $ `, true);
+        } else {
+            return console.log("Ты нищий", false);
+        }
+    } else if (age >= 24){
+        money +=100;
+        if (money >= 2000) {
+            return console.log(`У тебя не хватает денег, но мы выдаем тебе кредит 100$ и сумма твоего депозита становится: ${money} $ `, true);
+        } else {
+            return console.log("Ты нищий", false);
+        }
+    } else if (age < 24 && money < 2000) {
+        return console.log("Купить не получится!", false)
+    }
+}
+console.log(userData(age,work,money));
+
+
