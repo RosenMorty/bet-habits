@@ -61,11 +61,19 @@ function userData (age, work, money) {
 }
 console.log(userData(age,work,money)); */
 
-const tasks = ['Задача 1'];
+/*const tasks = ['Задача 1'];
 const res = tasks.push('Задача 2', 'Задача 3', 'Задача 4');
 console.log(tasks);
 const res2 = tasks.splice(1,1);
 console.log(tasks);
-console.log(res2.concat(tasks));
+console.log(res2.concat(tasks));*/
 
-
+function splitTo (url) {
+    const mass = url.split('/');
+    const [protocol ,_, domen, ...site] = mass;
+    const mas = protocol.split(':');
+    mas.splice(1,1);
+    const sitee = site.join('/');
+    console.log(mas[0] + ";", domen + ";", '/' + sitee + ";");
+}
+splitTo('https://purpleschool.ru/course/javascript');
