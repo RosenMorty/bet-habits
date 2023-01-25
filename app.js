@@ -78,8 +78,30 @@ console.log(res2.concat(tasks));*/
 }
 splitTo('https://purpleschool.ru/course/javascript'); */
 
-const arr = ['!', 'JS', 'люблю', 'я'];
+/* const arr = ['!', 'JS', 'люблю', 'я'];
 for (let i = arr.length - 1; i >= 0; i--) {
     console.log(arr[i]);
-}
+} */
 
+const operations = [1000, -700, 300, -500, 10000];
+let stDohod = 0;
+let stRashod = 0;
+function myMoney(balance, operations) {
+    for (let element of operations) {
+        console.log(balance += element);
+        if (balance < 0) {
+            console.log("False");
+        } 
+        if (element > 0) {
+            stDohod += element;
+        } 
+        if (element < 0) {
+            stRashod += element;
+        }
+    } 
+    console.log(`Итоговый баланс: ${balance}$`);
+    console.log(`Средний доход: ${stDohod/3}$`);
+    console.log(`Средний расход: ${stRashod/2}$`);
+};
+
+myMoney(100, operations);
