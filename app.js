@@ -68,7 +68,7 @@ const res2 = tasks.splice(1,1);
 console.log(tasks);
 console.log(res2.concat(tasks));*/
 
-function splitTo (url) {
+/*function splitTo (url) {
     const mass = url.split('/');
     const [protocol ,_, domen, ...site] = mass;
     const mas = protocol.split(':');
@@ -76,4 +76,10 @@ function splitTo (url) {
     const sitee = site.join('/');
     console.log(mas[0] + ";", domen + ";", '/' + sitee + ";");
 }
-splitTo('https://purpleschool.ru/course/javascript');
+splitTo('https://purpleschool.ru/course/javascript'); */
+
+const arr = ['!', 'JS', 'люблю', 'я'];
+for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr[i]);
+}
+
