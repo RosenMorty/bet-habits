@@ -105,5 +105,15 @@ for (let i = arr.length - 1; i >= 0; i--) {
 
 //myMoney(100, operations); 
 
-const power = pow => num => num**pow;
-console.log(power(2)(3));
+// const power = pow => num => num**pow;
+// console.log(power(2)(3));
+
+const prices = [[100, 200], [120, 100], [200,350]];
+let con = prices
+    .map(el => { if (el[0] < el[1]) {
+        return el[1] - el[0];
+    }
+}).filter(el => {
+        return el > 0;
+    });
+console.log(con);
