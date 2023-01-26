@@ -108,12 +108,18 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // const power = pow => num => num**pow;
 // console.log(power(2)(3));
 
-const prices = [[100, 200], [120, 100], [200,350]];
-let con = prices
-    .map(el => { if (el[0] < el[1]) {
-        return el[1] - el[0];
-    }
-}).filter(el => {
-        return el > 0;
-    });
-console.log(con);
+// const prices = [[100, 200], [120, 100], [200,350]];
+// let con = prices
+//     .map(el => { if (el[0] < el[1]) {
+//         return el[1] - el[0];
+//     }
+// }).filter(price => {
+//         return price > 0;
+//     });
+// console.log(con);
+ 
+const arr = [1, 4, 4, 10];
+let res = arr.reduce((acc, value) => {
+    return acc+=value/arr.length;
+}, 0);  
+console.log(res)
