@@ -118,8 +118,15 @@ for (let i = arr.length - 1; i >= 0; i--) {
 //     });
 // console.log(con);
  
-const arr = [1, 4, 4, 10];
-let res = arr.reduce((acc, value) => {
-    return acc+=value/arr.length;
-}, 0);  
-console.log(res)
+// const arr = [1, 4, 4, 10];
+// let res = arr.reduce((acc, value) => {
+//     return acc+=value/arr.length;
+// }, 0);  
+// console.log(res)
+
+const arr = [2, 4, 4, 10, 20];
+    function some(array, element) {
+        const res = arr.find( el => el === element);
+        return res == undefined ? false : true;
+    }
+console.log(some(arr,0));
