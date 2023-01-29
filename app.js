@@ -124,9 +124,56 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // }, 0);  
 // console.log(res)
 
-const arr = [2, 4, 4, 10, 20];
-    function some(array, element) {
-        const res = arr.find( el => el === element);
-        return res == undefined ? false : true;
-    }
-console.log(some(arr,0));
+// const arr = [2, 4, 4, 10, 20];
+//     function some(array, element) {
+//         const res = arr.find( el => el === element);
+//         return res == undefined ? false : true;
+//     }
+// console.log(some(arr,0));
+
+// const userName = 'Вася aka Terminator Пупкин';
+// let un = userName.slice(0, 4);
+// let sn = userName.slice(userName.length - 6);
+// console.log(un,sn);
+// let second = userName['Пупкин'];
+
+// const num1 = '89103235356';
+// const num2 = '+79103235356';
+// const num3 = '+7(910)3235356';
+// const num4 = '+7(910) 323-53-56';
+// const num5 = '   +7(910) 323-53-56   ';
+// const num6 = ' asdfghjkla ';
+// function check(num) {
+//     num.trim()
+//     .replace('+7', '8')
+//     .replace(/()- /g)
+//     if (num[0] === '8' && num.lenght == 11) {
+//         console.log('Правильный номер:', num,); 
+//     } else { 
+//         console.log('Это не номер!');
+//     }
+// }
+// console.log(check(num1))
+// console.log(num1.length)
+
+// const card = '2342834503458353'
+// console.log(card.slice(-4).padStart(card.length, '*'));
+
+const users = [
+    {name: 'Вася', age: 30},
+    {name: 'Катя', age: 18},
+    {name: 'Аня', age: 40},
+    {name: 'Петя', age: 25}
+];
+// users.sort(function (min,max) {
+//     if (min.age > max.age) {
+//         return 1;
+//     } if (min.age < max.age) {
+//         return -1;
+//     } else {
+//         return;
+//     }
+// })
+// console.log(users);
+
+console.log(users.sort((a, b) => a.age - b.age));
