@@ -159,12 +159,12 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // const card = '2342834503458353'
 // console.log(card.slice(-4).padStart(card.length, '*'));
 
-const users = [
-    {name: 'Вася', age: 30},
-    {name: 'Катя', age: 18},
-    {name: 'Аня', age: 40},
-    {name: 'Петя', age: 25}
-];
+// const users = [
+//     {name: 'Вася', age: 30},
+//     {name: 'Катя', age: 18},
+//     {name: 'Аня', age: 40},
+//     {name: 'Петя', age: 25}
+// ];
 // users.sort(function (min,max) {
 //     if (min.age > max.age) {
 //         return 1;
@@ -176,4 +176,59 @@ const users = [
 // })
 // console.log(users);
 
-console.log(users.sort((a, b) => a.age - b.age));
+// console.log(users.sort((a, b) => a.age - b.age));
+
+// const users = [
+//     {
+//     name: 'Вася',
+//     surname: 'Пупкин',
+//     age: 30,
+//     skills: ['Разработка', 'DevOps']
+// }, 
+// {
+//     name: 'Катя',
+//     surname: 'Белова',
+//     age: 18,
+//     skills: ['Дизайн']  
+// },
+// ];
+// users[0]['fullname'] = `${users[0].name} ${users[0].surname}`;
+// users[1]['fullname'] = `${users[1].name} ${users[1].surname}`;
+// users[0]['skillNum'] = Number(users[0].skills.length);
+// users[1]['skillNum'] = Number(users[1].skills.length);
+// console.log(users)
+
+const walet = {
+    balance: 0,
+    operation: [],
+        increase: function (sum,reason){
+        this.balance+=sum;
+        this.operation.push({
+            reason: reason,
+            sum: sum
+        })
+            return true;
+        },
+        decrease: function (sum,reason){
+        if(this.balance < sum){
+            console.log('Не хватает денег');
+            return false;
+        }
+        this.balance-=sum;
+        this.operation.push({
+            reason: reason,
+            sum: sum
+        })
+            return true;
+        },
+        getOperationLenght: function (){
+        return this.operation.length;
+        }
+    }
+console.log(walet.increase(1000, 'sads'));
+console.log(walet.getOperationLenght());
+console.log(walet.decrease(5000,'sfads'));
+console.log(walet.getOperationLenght());
+console.log(walet.increase(500,'ssdasdaads'));
+console.log(walet.getOperationLenght());
+    
