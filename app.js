@@ -198,37 +198,99 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // users[1]['skillNum'] = Number(users[1].skills.length);
 // console.log(users)
 
-const walet = {
-    balance: 0,
-    operation: [],
-        increase: function (sum,reason){
-        this.balance+=sum;
-        this.operation.push({
-            reason: reason,
-            sum: sum
-        })
-            return true;
-        },
-        decrease: function (sum,reason){
-        if(this.balance < sum){
-            console.log('Не хватает денег');
-            return false;
+// const walet = {
+//     balance: 0,
+//     operation: [],
+//         increase: function (sum,reason){
+//         this.balance+=sum;
+//         this.operation.push({
+//             reason: reason,
+//             sum: sum
+//         })
+//             return true;
+//         },
+//         decrease: function (sum,reason){
+//         if(this.balance < sum){
+//             console.log('Не хватает денег');
+//             return false;
+//         }
+//         this.balance-=sum;
+//         this.operation.push({
+//             reason: reason,
+//             sum: sum
+//         })
+//             return true;
+//         },
+//         getOperationLenght: function (){
+//         return this.operation.length;
+//         }
+//     }
+// console.log(walet.increase(1000, 'sads'));
+// console.log(walet.getOperationLenght());
+// console.log(walet.decrease(5000,'sfads'));
+// console.log(walet.getOperationLenght());
+// console.log(walet.increase(500,'ssdasdaads'));
+// console.log(walet.getOperationLenght());
+
+// const wareHouse = {
+//     goods: [],
+//     findGoodById: function (name) {
+//         return name.id;
+//     },
+//     addGood: function (name) {
+//         this.goods.push({name: name, id: this.goods.length+1});
+//         this.goods.push(...name);
+//     },
+//     getWeightKg: function (name) {
+//         let sum = 0;
+//         console.log(name?.weight?.kg);
+//     }
+// };
+
+// const car = {
+//     id: 1,
+//     weight: {
+//         kg: 1000
+//     },
+//     brand: 'Ford'
+// };
+
+// const chair = {
+//     id: 2,
+//     weight: {
+//         kg: 2
+//     },
+// };
+
+// const paper = {
+//     id: 3,
+//     color: 'red'
+// }
+
+// console.log(wareHouse.addGood('car'));
+// console.log(wareHouse.goods);
+
+const company = {
+    name: 'ООО Агро',
+    getName: function () {
+        return this.name
+    },
+    empliyees: [
+        {
+            name: 'Света',
+            getEmp: function () {
+                return this.name
+            }
         }
-        this.balance-=sum;
-        this.operation.push({
-            reason: reason,
-            sum: sum
-        })
-            return true;
-        },
-        getOperationLenght: function (){
-        return this.operation.length;
+    ],
+    ceo: {
+        name: 'Вася',
+        getCeo: function () {
+            return this.name
         }
     }
-console.log(walet.increase(1000, 'sads'));
-console.log(walet.getOperationLenght());
-console.log(walet.decrease(5000,'sfads'));
-console.log(walet.getOperationLenght());
-console.log(walet.increase(500,'ssdasdaads'));
-console.log(walet.getOperationLenght());
-    
+}
+
+console.log(company.getName())
+console.log(company.ceo.getCeo())
+console.log(company.empliyees.map((el) => {return el.name}).join())
