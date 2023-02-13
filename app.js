@@ -270,27 +270,44 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // console.log(wareHouse.addGood('car'));
 // console.log(wareHouse.goods);
 
-const company = {
-    name: 'ООО Агро',
-    getName: function () {
-        return this.name
-    },
-    empliyees: [
-        {
-            name: 'Света',
-            getEmp: function () {
-                return this.name
-            }
-        }
-    ],
-    ceo: {
-        name: 'Вася',
-        getCeo: function () {
-            return this.name
-        }
+// const company = {
+//     name: 'ООО Агро',
+//     getName: function () {
+//         return this.name
+//     },
+//     empliyees: [
+//         {
+//             name: 'Света',
+//             getEmp: function () {
+//                 return this.name
+//             }
+//         }
+//     ],
+//     ceo: {
+//         name: 'Вася',
+//         getCeo: function () {
+//             return this.name
+//         }
+//     }
+// }
+
+// console.log(company.getName())
+// console.log(company.ceo.getCeo())
+// console.log(company.empliyees.map((el) => {return el.name}).join())
+
+
+const namePas = {
+    name: name,
+    password: "0b"
+} 
+function removePassword(reset) {
+    if (reset) {
+        this.password = undefined;
+    } else {
+        this.password = '1';
     }
 }
 
-console.log(company.getName())
-console.log(company.ceo.getCeo())
-console.log(company.empliyees.map((el) => {return el.name}).join())
+const p = removePassword.bind(namePas)
+console.log(p(true))
+console.log(namePas.password)
