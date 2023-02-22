@@ -312,30 +312,30 @@ for (let i = arr.length - 1; i >= 0; i--) {
 // console.log(p(true))
 // console.log(namePas.password)
 
-const userInfo = {
-    balance: 0,
-    operations: 0,
-    increase(sum) {
-        this.balance +=sum;
-        this.operations++;
-        console.log(this.balance)
-    }
-}
+// const userInfo = {
+//     balance: 0,
+//     operations: 0,
+//     increase(sum) {
+//         this.balance +=sum;
+//         this.operations++;
+//         console.log(this.balance)
+//     }
+// }
 
-// userInfo.increase(12)
-// userInfo.increase(18)
-// userInfo.increase(-15)
+// // userInfo.increase(12)
+// // userInfo.increase(18)
+// // userInfo.increase(-15)
 
 
-function user1() {
-    let balance = userInfo
-    return function() {
-        return balance;
-    }
-}
+// function user1() {
+//     let balance = userInfo
+//     return function() {
+//         return balance;
+//     }
+// }
 
-const ada = user1();
-ada().increase(100)
-ada().increase(12)
-ada().increase(111)
+// const ada = user1();
+// ada().increase(100)
+// ada().increase(12)
+// ada().increase(111)
 
